@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after{
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: inherit;
+}
+html{
+font-size:100%;
+box-sizing:border-box;
+}
+body{
+padding: 0;
+margin: 0;
+line-height: 1;
+font-size: 1rem;
+font-weight: 400;
+font-family: 'Roboto', sans-serif;
+color:#000;
+background:#fff;
+}
+
+.wrapper{
+	min-height: 100%;
+	overflow: clip;
+	display:flex;
+	flex-direction:column;
+}
+[class*=__container] {
+	max-width: 79.375rem; /*1270px*/
+	margin: 0 auto;
+	box-sizing: content-box;
+	padding: 0rem .9375rem;
+}
+
+
+
+/*=======================================partners====================================================*/
+
+.partners {
+	padding-top: 4.375rem;
+}
+
+.partners__container {}
+
+.partners__title {
+	font-size: clamp(1.75rem, 1.1802rem + 1.1887vw, 2.25rem);
+	font-weight: 500;
+	color:  #121920;
+	line-height: 160%;
+	text-transform: uppercase;
+}
+.partners__title:not(:last-child){
+	margin-bottom: 1.875rem;
+}
+
+.partners__items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.875rem;
+}
+
+.partners__item {
+	border-radius: 0.3125rem;
+	border: 0.0625rem solid #EBEBF1;
+	background-color:  #FFF;
+	transition: box-shadow 0.3s;
+	cursor: url('./img/cursor.png'), auto;
+}
+
+@media(any-hover:hover){
+	.partners__item:hover{
+		box-shadow: 0px 0px 10px 0px rgba(164, 164, 164, 0.03), -3px 0px 40px 0px rgba(0, 0, 0, 0.10);
+	}	
+}
+
+.item-partners {
+	padding: 1.75rem 1.6563rem 1.75rem 1.6875rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 14.625rem;
+	height: 4rem;
+}
+
+.item-partners__img {
+	max-width: 100%;
+}
+
+@media(max-width:81.25rem){
+	.partners__items{
+		justify-content: space-between;
+	}
+}
+
+@media(max-width:61.9988em){
+	.partners__items{
+		gap: 1.25rem;
+	}
+	.item-partners{
+		width: 12.4375rem;
+		height: 5.625rem;
+		padding: 0.9375rem;
+	}
+}
+
+@media(max-width:47.9988em){
+	.partners__items{
+		justify-content: center;
+	}
+	.item-partners{
+		width: 100%;
+		height: 5.625rem;
+		padding:1.5625rem;
+	}
+	.item-partners__img {
+		/* width: 100%; */
+		max-width: none;
+	}
+}
